@@ -1,10 +1,11 @@
+version: "1"
 services:
   - type: web
     name: gvv-backend
-    plan: free
-    region: oregon
+    runtime: java
     repo: https://github.com/evilvishal/GVV
     branch: main
+    plan: free
+    region: oregon
     buildCommand: ./mvnw clean install
     startCommand: java -jar target/*.jar
-version: "1"                   # ✅ Don't forget the version line
