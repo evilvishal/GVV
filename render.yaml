@@ -2,10 +2,9 @@ services:
   - type: web
     name: gvv-backend
     env: java
-    repo: https://github.com/evilvishal/GVV
     plan: free
     region: oregon
+    repo: https://github.com/evilvishal/GVV
+    branch: main
     buildCommand: ./mvnw clean install
     startCommand: java -jar target/*.jar
-    autoDeployTrigger: commit
-version: "1"
